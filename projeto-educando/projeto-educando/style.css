@@ -1,0 +1,383 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f0c1b;
+    color: #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 60px;
+}
+
+/* Navbar Fixa */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #090611;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    border-bottom: 1px solid #1f1a3a;
+}
+
+.nav-logo {
+    color: #ffea00;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #ffea00;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #1c0b36, #0f2b5c);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #2d1f4e;
+}
+
+header .logo {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffea00;
+    margin-bottom: 12px;
+    text-shadow: 0 0 12px rgba(255, 234, 0, 0.3);
+}
+
+header .slogan {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #cbd5e1;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+/* Títulos Globais */
+section h2 {
+    text-align: center;
+    color: #a78bfa;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+/* Painel de Métricas (Cartões) */
+.secao-metricas {
+    margin-bottom: 50px;
+}
+
+.grid-metricas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card-metrica {
+    background: #18142a;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid #ffea00;
+    transition: transform 0.2s ease;
+}
+
+.card-metrica:hover {
+    transform: translateY(-4px);
+}
+
+.numero-metrica {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffea00;
+    margin-bottom: 8px;
+}
+
+.label-metrica {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+/* Diretoria Executiva */
+.secao-lideranca {
+    margin-bottom: 50px;
+}
+
+.grid-liderança {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card-lider {
+    background: #18142a;
+    border-radius: 12px;
+    padding: 25px 35px;
+    border-top: 5px solid #ffea00;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    min-width: 260px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card-lider:hover {
+    transform: translateY(-4px);
+}
+
+.cargo-badge {
+    background-color: #4c1d95;
+    color: #f3e8ff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.card-lider h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+}
+
+.card-lider p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* Missão, Visão, Base e Valores */
+.secao-institucional {
+    margin-bottom: 50px;
+}
+
+.grid-institucional {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.card-institucional {
+    background: #18142a;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid #a78bfa;
+}
+
+.card-base {
+    border-left-color: #38bdf8;
+}
+
+.card-valores {
+    border-left-color: #ffea00;
+}
+
+.icon-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.icon-titulo .icone {
+    font-size: 1.5rem;
+}
+
+.card-institucional h3 {
+    color: #a78bfa;
+    font-size: 1.3rem;
+}
+
+.card-institucional p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+.descricao-valores {
+    margin-top: 8px;
+    font-size: 0.9rem !important;
+    color: #94a3b8 !important;
+}
+
+/* Campo de Busca */
+.busca-container {
+    max-width: 700px;
+    margin: 0 auto 35px auto;
+}
+
+.busca-container input {
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 2px solid #38bdf8;
+    background-color: #18142a;
+    color: #ffffff;
+    font-size: 1.05rem;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.busca-container input::placeholder {
+    color: #ffea00;
+    opacity: 0.9;
+}
+
+.busca-container input:focus {
+    border-color: #ffea00;
+    box-shadow: 0 0 15px rgba(255, 234, 0, 0.3);
+}
+
+/* Setores */
+.secao-setores {
+    margin-bottom: 30px;
+}
+
+.grid-setores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card-setor {
+    background: #18142a;
+    border-radius: 12px;
+    padding: 25px;
+    border-top: 5px solid #38bdf8;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.badge {
+    background-color: #ffea00;
+    color: #0f0c1b;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    align-self: flex-start;
+    margin-bottom: 12px;
+}
+
+.card-setor h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.card-setor p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Botão de Integrantes */
+.btn-toggle {
+    background-color: #6d28d9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    margin-bottom: 10px;
+}
+
+.btn-toggle:hover {
+    background-color: #0284c7;
+}
+
+/* Lista de Integrantes */
+.integrantes {
+    background-color: #0f0c1b;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border-left: 3px solid #ffea00;
+    margin-top: 10px;
+}
+
+.escondido {
+    display: none;
+}
+
+.integrantes strong {
+    font-size: 0.85rem;
+    color: #a78bfa;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.integrantes ul {
+    list-style-type: square;
+    padding-left: 18px;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+.integrantes li {
+    margin-bottom: 4px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #090611;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    margin-top: 40px;
+    border-top: 1px solid #1f1a3a;
+}
