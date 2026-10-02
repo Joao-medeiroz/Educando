@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Formulário</h1>
-</body>
-</html><!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Preencha seu perfil no Educando e encontre oportunidades.">
+    <meta
+        name="description"
+        content="Preencha seu perfil no Educando e encontre oportunidades."
+    >
+
+    <meta
+        name="author"
+        content="Educando"
+    >
 
     <title>Educando | Encontre sua oportunidade</title>
 
@@ -28,16 +23,26 @@
 
 </head>
 
+
 <body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
 
     <header>
 
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navegação principal">
 
-            <a href="../index.html"
-                class="nav-logo">
+            <a
+                href="../index.html"
+                class="nav-logo"
+                aria-label="Educando - Página inicial"
+            >
                 Educando
             </a>
+
 
             <ul class="nav-links">
 
@@ -48,8 +53,11 @@
                 </li>
 
                 <li>
-                    <a href="form.html"
-                        class="ativo">
+                    <a
+                        href="form.html"
+                        class="ativo"
+                        aria-current="page"
+                    >
                         Formulário
                     </a>
                 </li>
@@ -73,9 +81,20 @@
     </header>
 
 
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
     <main>
 
-        <section class="formulario-area">
+        <section
+            class="formulario-area"
+            aria-labelledby="titulo-formulario"
+        >
+
+
+            <!-- INTRODUÇÃO -->
 
             <div class="form-intro">
 
@@ -83,7 +102,7 @@
                     📝 Seu perfil
                 </span>
 
-                <h1>
+                <h1 id="titulo-formulario">
                     Conte um pouco sobre você
                 </h1>
 
@@ -96,12 +115,66 @@
             </div>
 
 
+
+            <!-- =================================================
+                 FORMULÁRIO
+            ================================================== -->
+
             <form
                 id="formPerfil"
                 class="formulario"
+                action="https://formsubmit.co/educandooti@gmail.com"
+                method="POST"
             >
 
-                <!-- DADOS PESSOAIS -->
+
+                <!-- =================================================
+                     CONFIGURAÇÕES DO FORMSUBMIT
+                ================================================== -->
+
+                <!-- Assunto do e-mail -->
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="Novo perfil preenchido - Educando"
+                >
+
+
+                <!-- Organiza o e-mail em formato de tabela -->
+
+                <input
+                    type="hidden"
+                    name="_template"
+                    value="table"
+                >
+
+
+                <!-- Proteção contra spam -->
+
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="true"
+                >
+
+
+                <!--
+                    Impede que o usuário seja redirecionado
+                    para uma página externa depois do envio.
+                -->
+
+                <input
+                    type="hidden"
+                    name="_url"
+                    value="https://educando.com"
+                >
+
+
+
+                <!-- =================================================
+                     DADOS PESSOAIS
+                ================================================== -->
 
                 <div class="form-section">
 
@@ -109,7 +182,11 @@
                         👤 Dados pessoais
                     </h2>
 
+
                     <div class="form-grid">
+
+
+                        <!-- NOME -->
 
                         <div class="campo">
 
@@ -120,13 +197,17 @@
                             <input
                                 type="text"
                                 id="nome"
-                                name="nome"
+                                name="Nome completo"
                                 placeholder="Digite seu nome"
+                                autocomplete="name"
                                 required
                             >
 
                         </div>
 
+
+
+                        <!-- EMAIL -->
 
                         <div class="campo">
 
@@ -137,13 +218,17 @@
                             <input
                                 type="email"
                                 id="email"
-                                name="email"
+                                name="E-mail"
                                 placeholder="seuemail@email.com"
+                                autocomplete="email"
                                 required
                             >
 
                         </div>
 
+
+
+                        <!-- IDADE -->
 
                         <div class="campo">
 
@@ -154,7 +239,7 @@
                             <input
                                 type="number"
                                 id="idade"
-                                name="idade"
+                                name="Idade"
                                 min="14"
                                 max="100"
                                 placeholder="Ex: 18"
@@ -163,6 +248,9 @@
 
                         </div>
 
+
+
+                        <!-- CIDADE -->
 
                         <div class="campo">
 
@@ -173,8 +261,9 @@
                             <input
                                 type="text"
                                 id="cidade"
-                                name="cidade"
+                                name="Cidade"
                                 placeholder="Sua cidade"
+                                autocomplete="address-level2"
                             >
 
                         </div>
@@ -184,7 +273,10 @@
                 </div>
 
 
-                <!-- FORMAÇÃO -->
+
+                <!-- =================================================
+                     FORMAÇÃO
+                ================================================== -->
 
                 <div class="form-section">
 
@@ -192,43 +284,49 @@
                         🎓 Formação
                     </h2>
 
+
                     <div class="campo">
 
                         <label for="escolaridade">
                             Escolaridade
                         </label>
 
+
                         <select
                             id="escolaridade"
-                            name="escolaridade"
+                            name="Escolaridade"
                             required
                         >
 
-                            <option value="">
+                            <option
+                                value=""
+                                disabled
+                                selected
+                            >
                                 Selecione
                             </option>
 
-                            <option>
+                            <option value="Ensino Fundamental">
                                 Ensino Fundamental
                             </option>
 
-                            <option>
+                            <option value="Ensino Médio">
                                 Ensino Médio
                             </option>
 
-                            <option>
+                            <option value="Ensino Médio completo">
                                 Ensino Médio completo
                             </option>
 
-                            <option>
+                            <option value="Ensino Técnico">
                                 Ensino Técnico
                             </option>
 
-                            <option>
+                            <option value="Ensino Superior">
                                 Ensino Superior
                             </option>
 
-                            <option>
+                            <option value="Ensino Superior completo">
                                 Ensino Superior completo
                             </option>
 
@@ -239,7 +337,10 @@
                 </div>
 
 
-                <!-- INTERESSES -->
+
+                <!-- =================================================
+                     INTERESSES
+                ================================================== -->
 
                 <div class="form-section">
 
@@ -247,19 +348,24 @@
                         🚀 Seus interesses
                     </h2>
 
+
                     <p class="descricao">
                         Selecione as áreas que mais despertam
                         seu interesse.
                     </p>
 
+
                     <div class="checkbox-grid">
+
+
+                        <!-- TECNOLOGIA -->
 
                         <label class="checkbox">
 
                             <input
                                 type="checkbox"
-                                name="interesse"
-                                value="tecnologia"
+                                name="Interesses"
+                                value="Tecnologia"
                             >
 
                             <span>
@@ -269,12 +375,15 @@
                         </label>
 
 
+
+                        <!-- ADMINISTRAÇÃO -->
+
                         <label class="checkbox">
 
                             <input
                                 type="checkbox"
-                                name="interesse"
-                                value="administracao"
+                                name="Interesses"
+                                value="Administração"
                             >
 
                             <span>
@@ -284,12 +393,15 @@
                         </label>
 
 
+
+                        <!-- MARKETING -->
+
                         <label class="checkbox">
 
                             <input
                                 type="checkbox"
-                                name="interesse"
-                                value="marketing"
+                                name="Interesses"
+                                value="Marketing"
                             >
 
                             <span>
@@ -299,12 +411,15 @@
                         </label>
 
 
+
+                        <!-- SAÚDE -->
+
                         <label class="checkbox">
 
                             <input
                                 type="checkbox"
-                                name="interesse"
-                                value="saude"
+                                name="Interesses"
+                                value="Saúde"
                             >
 
                             <span>
@@ -314,12 +429,15 @@
                         </label>
 
 
+
+                        <!-- EDUCAÇÃO -->
+
                         <label class="checkbox">
 
                             <input
                                 type="checkbox"
-                                name="interesse"
-                                value="educacao"
+                                name="Interesses"
+                                value="Educação"
                             >
 
                             <span>
@@ -329,12 +447,15 @@
                         </label>
 
 
+
+                        <!-- DESIGN -->
+
                         <label class="checkbox">
 
                             <input
                                 type="checkbox"
-                                name="interesse"
-                                value="design"
+                                name="Interesses"
+                                value="Design"
                             >
 
                             <span>
@@ -348,7 +469,10 @@
                 </div>
 
 
-                <!-- OBJETIVO -->
+
+                <!-- =================================================
+                     OBJETIVO
+                ================================================== -->
 
                 <div class="form-section">
 
@@ -356,19 +480,25 @@
                         🎯 O que você procura?
                     </h2>
 
+
                     <div class="radio-grid">
+
+
+                        <!-- CURSO -->
 
                         <label class="radio-card">
 
                             <input
                                 type="radio"
-                                name="objetivo"
-                                value="curso"
+                                name="Objetivo"
+                                value="Curso"
                                 required
                             >
 
                             <span>
+
                                 🎓
+
                                 <strong>
                                     Curso
                                 </strong>
@@ -376,21 +506,27 @@
                                 <small>
                                     Quero aprender algo novo
                                 </small>
+
                             </span>
 
                         </label>
 
 
+
+                        <!-- ESTÁGIO -->
+
                         <label class="radio-card">
 
                             <input
                                 type="radio"
-                                name="objetivo"
-                                value="estagio"
+                                name="Objetivo"
+                                value="Estágio"
                             >
 
                             <span>
+
                                 💼
+
                                 <strong>
                                     Estágio
                                 </strong>
@@ -398,21 +534,27 @@
                                 <small>
                                     Quero experiência profissional
                                 </small>
+
                             </span>
 
                         </label>
 
 
+
+                        <!-- EMPREGO -->
+
                         <label class="radio-card">
 
                             <input
                                 type="radio"
-                                name="objetivo"
-                                value="emprego"
+                                name="Objetivo"
+                                value="Emprego"
                             >
 
                             <span>
+
                                 🚀
+
                                 <strong>
                                     Emprego
                                 </strong>
@@ -420,21 +562,27 @@
                                 <small>
                                     Quero entrar no mercado
                                 </small>
+
                             </span>
 
                         </label>
 
 
+
+                        <!-- VESTIBULAR -->
+
                         <label class="radio-card">
 
                             <input
                                 type="radio"
-                                name="objetivo"
-                                value="vestibular"
+                                name="Objetivo"
+                                value="Vestibular"
                             >
 
                             <span>
+
                                 🏛️
+
                                 <strong>
                                     Vestibular
                                 </strong>
@@ -442,6 +590,7 @@
                                 <small>
                                     Quero entrar na faculdade
                                 </small>
+
                             </span>
 
                         </label>
@@ -451,29 +600,44 @@
                 </div>
 
 
-                <!-- BOTÃO -->
+
+                <!-- =================================================
+                     BOTÃO DE ENVIO
+                ================================================== -->
 
                 <button
                     type="submit"
                     class="btn-enviar"
                 >
-
                     Encontrar oportunidades 🚀
-
                 </button>
+
 
             </form>
 
 
+
+            <!-- =================================================
+                 RESULTADO
+            ================================================== -->
+
             <div
                 id="resultado"
                 class="resultado"
+                role="status"
+                aria-live="polite"
             ></div>
+
 
         </section>
 
     </main>
 
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
 
     <footer>
 
@@ -487,8 +651,6 @@
 
     </footer>
 
-
-    <script src="script.js"></script>
 
 </body>
 
