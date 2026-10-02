@@ -99,7 +99,7 @@ function filtrarCards(termo) {
 function mostrarMensagemVazia(mostrar, termo = '') {
     let msg = document.getElementById('msg-vazia');
 
-    // Cria o elemento se ainda não existir
+    // Cria o elemento se ainda não existir 
     if (!msg) {
         msg = document.createElement('p');
         msg.id        = 'msg-vazia';

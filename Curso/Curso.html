@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Encontre cursos e oportunidades no Educando.">
+
+    <title>Educando | Cursos e Oportunidades</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="../index.html"
+                class="nav-logo">
+                Educando
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="../index.html">
+                        HOME
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Formulario/form.html">
+                        Formulário
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Curso.html"
+                        class="ativo">
+                        Cursos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Sobre/sobre.html">
+                        Sobre
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <section class="hero-cursos">
+
+            <span>
+                🎓 Oportunidades
+            </span>
+
+            <h1>
+                Explore cursos e oportunidades
+            </h1>
+
+            <p>
+                Encontre conteúdos e oportunidades para
+                desenvolver suas habilidades e sua carreira.
+            </p>
+
+        </section>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- PESQUISA -->
+
+        <section class="filtros">
+
+            <input
+                type="search"
+                id="campoBusca"
+                placeholder="🔎 Pesquisar curso ou oportunidade..."
+            >
+
+            <select id="filtroCategoria">
+
+                <option value="todos">
+                    Todas as categorias
+                </option>
+
+                <option value="curso">
+                    Cursos
+                </option>
+
+                <option value="estagio">
+                    Estágios
+                </option>
+
+                <option value="emprego">
+                    Empregos
+                </option>
+
+                <option value="vestibular">
+                    Vestibulares
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- RESULTADOS -->
+
+        <section>
+
+            <div class="titulo-resultados">
+
+                <div>
+
+                    <span>
+                        Oportunidades
+                    </span>
+
+                    <h2>
+                        Encontre o que procura
+                    </h2>
+
+                </div>
+
+                <span id="contador">
+                    6 oportunidades
+                </span>
+
+            </div>
+
+
+            <div
+                class="grid-cursos"
+                id="gridCursos"
+            >
+
+
+                <!-- CARD 1 -->
+
+                <article
+                    class="curso-card"
+                    data-categoria="curso"
+                    data-nome="Introdução à Programação"
+                >
+
+                    <div class="curso-topo">
+
+                        <span class="badge curso">
+                            CURSO
+                        </span>
+
+                        <span>
+                            🎓
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Introdução à Programação
+                    </h3>
+
+                    <p>
+                        Aprenda lógica de programação,
+                        algoritmos e conceitos fundamentais.
+                    </p>
+
+                    <div class="curso-info">
+
+                        <span>
+                            📚 40 horas
+                        </span>
+
+                        <span>
+                            🌐 Online
+                        </span>
+
+                    </div>
+
+                    <button class="btn-detalhes">
+                        Ver detalhes
+                    </button>
+
+                </article>
+
+
+                <!-- CARD 2 -->
+
+                <article
+                    class="curso-card"
+                    data-categoria="curso"
+                    data-nome="Marketing Digital"
+                >
+
+                    <div class="curso-topo">
+
+                        <span class="badge curso">
+                            CURSO
+                        </span>
+
+                        <span>
+                            📱
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Marketing Digital
+                    </h3>
+
+                    <p>
+                        Aprenda estratégias de comunicação,
+                        redes sociais e divulgação.
+                    </p>
+
+                    <div class="curso-info">
+
+                        <span>
+                            📚 30 horas
+                        </span>
+
+                        <span>
+                            🌐 Online
+                        </span>
+
+                    </div>
+
+                    <button class="btn-detalhes">
+                        Ver detalhes
+                    </button>
+
+                </article>
+
+
+                <!-- CARD 3 -->
+
+                <article
+                    class="curso-card"
+                    data-categoria="estagio"
+                    data-nome="Estágio em Tecnologia"
+                >
+
+                    <div class="curso-topo">
+
+                        <span class="badge estagio">
+                            ESTÁGIO
+                        </span>
+
+                        <span>
+                            💼
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Estágio em Tecnologia
+                    </h3>
+
+                    <p>
+                        Oportunidade para estudantes
+                        interessados em tecnologia.
+                    </p>
+
+                    <div class="curso-info">
+
+                        <span>
+                            📍 São Paulo
+                        </span>
+
+                        <span>
+                            ⏱ 6 horas
+                        </span>
+
+                    </div>
+
+                    <button class="btn-detalhes">
+                        Ver detalhes
+                    </button>
+
+                </article>
+
+
+                <!-- CARD 4 -->
+
+                <article
+                    class="curso-card"
+                    data-categoria="emprego"
+                    data-nome="Assistente Administrativo"
+                >
+
+                    <div class="curso-topo">
+
+                        <span class="badge emprego">
+                            EMPREGO
+                        </span>
+
+                        <span>
+                            💼
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Assistente Administrativo
+                    </h3>
+
+                    <p>
+                        Vaga para auxiliar nas atividades
+                        administrativas de uma empresa.
+                    </p>
+
+                    <div class="curso-info">
+
+                        <span>
+                            📍 Presencial
+                        </span>
+
+                        <span>
+                            💰 Remunerado
+                        </span>
+
+                    </div>
+
+                    <button class="btn-detalhes">
+                        Ver detalhes
+                    </button>
+
+                </article>
+
+
+                <!-- CARD 5 -->
+
+                <article
+                    class="curso-card"
+                    data-categoria="vestibular"
+                    data-nome="Preparação para Vestibular"
+                >
+
+                    <div class="curso-topo">
+
+                        <span class="badge vestibular">
+                            VESTIBULAR
+                        </span>
+
+                        <span>
+                            🏛️
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Preparação para Vestibular
+                    </h3>
+
+                    <p>
+                        Conteúdos para auxiliar estudantes
+                        na preparação para provas.
+                    </p>
+
+                    <div class="curso-info">
+
+                        <span>
+                            🌐 Online
+                        </span>
+
+                        <span>
+                            📚 Gratuito
+                        </span>
+
+                    </div>
+
+                    <button class="btn-detalhes">
+                        Ver detalhes
+                    </button>
+
+                </article>
+
+
+                <!-- CARD 6 -->
+
+                <article
+                    class="curso-card"
+                    data-categoria="curso"
+                    data-nome="Excel Básico"
+                >
+
+                    <div class="curso-topo">
+
+                        <span class="badge curso">
+                            CURSO
+                        </span>
+
+                        <span>
+                            📊
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Excel Básico
+                    </h3>
+
+                    <p>
+                        Aprenda os principais recursos
+                        para utilizar planilhas.
+                    </p>
+
+                    <div class="curso-info">
+
+                        <span>
+                            📚 20 horas
+                        </span>
+
+                        <span>
+                            🌐 Online
+                        </span>
+
+                    </div>
+
+                    <button class="btn-detalhes">
+                        Ver detalhes
+                    </button>
+
+                </article>
+
+            </div>
+
+
+            <div
+                id="semResultado"
+                class="sem-resultado"
+            >
+
+                😕 Nenhuma oportunidade encontrada.
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <strong>
+            Educando
+        </strong>
+
+        <p>
+            Conectando pessoas a oportunidades.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
